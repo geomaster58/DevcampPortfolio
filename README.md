@@ -11,6 +11,11 @@
 - Portfolio
 - Drag and drop interface
 
+### Updates
+
+- Made a Home, About, and Contact pages
+- Made a Skills model
+
 ### Code Snippet
 
 
