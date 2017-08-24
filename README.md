@@ -15,6 +15,8 @@
 
 - Made a Home, About, and Contact pages
 - Made a Skills model
+- Made a Resources model
+
 
 ### Code Snippet
 
