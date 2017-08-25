@@ -16,6 +16,7 @@
 - Made a Home, About, and Contact pages
 - Made a Skills model
 - Made a Resources model
+- Made seed data for testing
 
 
 ### Code Snippet
