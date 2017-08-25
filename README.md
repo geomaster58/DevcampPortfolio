@@ -17,6 +17,7 @@
 - Made a Skills model
 - Made a Resources model
 - Made seed data for testing
+- Added portfolio CRUD functionality
 
 
 ### Code Snippet
