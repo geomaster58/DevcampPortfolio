@@ -8,6 +8,10 @@ class PortfoliosController < ApplicationController
     @port = Portfolio.new
   end
 
+  def show
+    @port = Portfolio.find(params[:id])
+  end  
+
   def create
     @port = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image ))
 
