@@ -1,13 +1,15 @@
 <h1>Portfolio Items!!</h1>
 
+<hr color="grey">
+
 <h2>Heres some items:</h2>
 
-
+<hr>
 <%= link_to "Create new Item!!", new_portfolio_path %>
-
+<hr>
 <% @port.each do |x| %>
 
-  <p> <%=link_to x.title, portfolio_path(x) %> </p>
+  <h3> <%=link_to x.title, portfolio_show_path(x) %> </h3>
   <p> <%=x.subtitle %> </p>
   <p> <%=x.body %> </p>
   <p> <%=image_tag x.thumb_image unless x.thumb_image.nil? %> </p>
