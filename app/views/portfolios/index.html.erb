@@ -1,0 +1,23 @@
+<h1>Portfolio Items!!</h1>
+
+<hr color="grey">
+
+<h2>Heres some items:</h2>
+
+<hr>
+<%= link_to "Create new Item!!", new_portfolio_path %>
+<hr>
+<% @port.each do |x| %>
+
+  <h3> <%=link_to x.title, portfolio_show_path(x) %> </h3>
+  <p> <%=x.subtitle %> </p>
+  <p> <%=x.body %> </p>
+  <p> <%=image_tag x.thumb_image unless x.thumb_image.nil? %> </p>
+  <%= link_to "Edit", edit_portfolio_path(x) %>
+  <%= link_to 'Delete', portfolio_path(x), method: :delete, data: { confirm: 'You positive you want to delete this?' } %>
+  <hr width="75%" align="left" color="blue">
+
+
+<% end %>
+
+
