@@ -3,12 +3,15 @@
 <h2>Heres some items:</h2>
 
 
+<%= link_to "Create new Item!!", new_portfolio_path %>
+
 <% @port.each do |x| %>
 
   <p> <%=x.title %> </p>
   <p> <%=x.subtitle %> </p>
   <p> <%=x.body %> </p>
   <p> <%=image_tag x.thumb_image unless x.thumb_image.nil? %> </p>
+  <%= link_to "Edit", edit_portfolio_path(x.id) %>
   <hr>
 
 
