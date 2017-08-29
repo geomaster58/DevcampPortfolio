@@ -4,6 +4,14 @@ class PortfoliosController < ApplicationController
     @port = Portfolio.all
   end
 
+  def angular
+    @angular_portfolio = Portfolio.angular
+  end
+
+  def rails 
+    @ruby = Portfolio.ruby_on_rails
+  end
+
   def new
     @port = Portfolio.new
   end
