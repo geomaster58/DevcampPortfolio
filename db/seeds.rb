@@ -1,9 +1,20 @@
+3.times do |x|
+  Topic.create!(
+  title: "Topic #{x}"
+  )
+
+ end 
+puts "3 topics created"
+
 10.times do |blog|
 
 Blog.create!(
 
   title: "My blog post #{blog}", 
-  body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat."
+  body: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates repudiandae sint et molestiae non recusandae. Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores alias consequatur aut perferendis doloribus asperiores repellat.",
+ 
+    topic_id: Topic.last.id
+
   )
 
 
@@ -21,11 +32,11 @@ puts "10 blog posts created"
   puts "5 skills created"
 
 
-9.times do |port|
+8.times do |port|
   Portfolio.create!(
 
-    title: "Portfolio title: #{port}"  ,
-    subtitle: "My great service" ,
+    title: "Portfolio title: #{port + 1}"  ,
+    subtitle: "Ruby on Rails" ,
     body: "res et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum ",
     main_image:"http://via.placeholder.com/600x400" ,
     thumb_image:"http://via.placeholder.com/350x200" ,
@@ -34,5 +45,27 @@ puts "10 blog posts created"
 
     )
 end
-puts "9 portfolios created"
+puts "8 portfolios created"
 
+1.times do |port|
+  Portfolio.create!(
+
+    title: "Portfolio title: 9"  ,
+    subtitle: "Angular" ,
+    body: "res et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum ",
+    main_image:"http://via.placeholder.com/600x400" ,
+    thumb_image:"http://via.placeholder.com/350x200" ,
+
+
+
+    )
+end
+puts "1 portfolios created"
+
+3.times do |technology|
+Portfolio.last.technologies.create!(
+  name: "Technology #{technology}"
+  )
+
+end
+ puts "3 techs created"
