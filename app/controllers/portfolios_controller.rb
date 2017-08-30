@@ -14,6 +14,7 @@ class PortfoliosController < ApplicationController
 
   def new
     @port = Portfolio.new
+    3.times { @port.technologies.build }
   end
 
   def show
@@ -21,7 +22,9 @@ class PortfoliosController < ApplicationController
   end  
 
   def create
-    @port = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image ))
+    @port = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, technologies_attributes: [:name]))
+
+    
 
     respond_to do |format|
       if @port.save

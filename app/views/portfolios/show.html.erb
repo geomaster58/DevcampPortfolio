@@ -3,4 +3,10 @@
 <h1><%= @port.title %></h1>
 <em><%= @port.subtitle %></em>
 <p><%= @port.body %></p> 
+<h2>Technologies used</h2>
+<% @port.technologies.each do |b| %>
+  <p><%= b.name %></p>
+<% end %>
+
+
 <%= link_to "Back", portfolios_path %>
