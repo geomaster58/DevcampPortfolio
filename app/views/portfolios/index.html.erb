@@ -4,9 +4,9 @@
 
 <h2>Heres some items:</h2>
 
-<hr>
+<hr width="50%" align="left">
 <%= link_to "Create new Item!!", new_portfolio_path %>
-<hr>
+<hr width="50%" align="left">
 <% @port.each do |x| %>
 
   <h3> <%=link_to x.title, portfolio_show_path(x) %> </h3>
