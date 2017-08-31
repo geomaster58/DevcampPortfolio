@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  before_action
+  
 
 
   def index
