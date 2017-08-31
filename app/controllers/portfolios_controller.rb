@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+  before_action
+
 
   def index
     @port = Portfolio.all
@@ -22,7 +24,7 @@ class PortfoliosController < ApplicationController
   end  
 
   def create
-    @port = Portfolio.new(params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, technologies_attributes: [:name]))
+    @port = Portfolio.new(portfolio_params)
 
     
 
@@ -47,7 +49,7 @@ class PortfoliosController < ApplicationController
     @port = Portfolio.find(params[:id]) 
 
     respond_to do |format|
-      if @port.update(params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image ))
+      if @port.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'You updated you portfolio!!' }
         
       else
@@ -65,6 +67,27 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_url, notice: 'Removed!!' }
     end
   end  
+
+
+  private
+
+  def portfolio_params
+    params.require(:portfolio).permit(:title, 
+                                      :subtitle, 
+                                      :body, 
+                                      :thumb_image, 
+                                      technologies_attributes: [:name]
+                                      )
+  end
+
+
+
+
+
+
+
+
+
 
 
 end
