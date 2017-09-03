@@ -18,16 +18,12 @@
    
    
    <%= login_helper %>
-   
+
     <%= yield %>
 
    
+    <%= source_helper %>
 
-
-    <div id="annoying_message">
-    <% if session[:source] %>
-    Thanks for visiting me from <%= session[:source] %>
-    <% end %>
-    </div>
+    
   </body>
 </html>
