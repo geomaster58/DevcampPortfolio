@@ -1,10 +1,10 @@
 <h1>Heres a Portfolio Item!!</h1>
-<%= image_tag @port.main_image %>
-<h1><%= @port.title %></h1>
-<em><%= @port.subtitle %></em>
-<p><%= @port.body %></p> 
+<%= image_tag @ports.main_image %>
+<h1><%= @ports.title %></h1>
+<em><%= @ports.subtitle %></em>
+<p><%= @ports.body %></p> 
 <h2>Technologies used</h2>
-<% @port.technologies.each do |b| %>
+<% @ports.technologies.each do |b| %>
   <p><%= b.name %></p>
 <% end %>
 

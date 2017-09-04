@@ -3,7 +3,7 @@ class PortfoliosController < ApplicationController
 
 
   def index
-    @port = Portfolio.all
+    @ports = Portfolio.all
   end
 
   def angular
@@ -15,21 +15,21 @@ class PortfoliosController < ApplicationController
   end
 
   def new
-    @port = Portfolio.new
-    3.times { @port.technologies.build }
+    @ports = Portfolio.new
+    3.times { @ports.technologies.build }
   end
 
   def show
-    @port = Portfolio.find(params[:id])
+    @ports = Portfolio.find(params[:id])
   end  
 
   def create
-    @port = Portfolio.new(portfolio_params)
+    @ports = Portfolio.new(portfolio_params)
 
     
 
     respond_to do |format|
-      if @port.save
+      if @ports.save
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item exists now!!' }
         
       else
@@ -40,16 +40,16 @@ class PortfoliosController < ApplicationController
   end
 
   def edit 
-    @port = Portfolio.find(params[:id]) 
+    @ports = Portfolio.find(params[:id]) 
      3.times { @port.technologies.build }
   end
 
   def update
 
-    @port = Portfolio.find(params[:id]) 
+    @ports = Portfolio.find(params[:id]) 
 
     respond_to do |format|
-      if @port.update(portfolio_params)
+      if @ports.update(portfolio_params)
         format.html { redirect_to portfolios_path, notice: 'You updated you portfolio!!' }
         
       else
@@ -60,9 +60,9 @@ class PortfoliosController < ApplicationController
   end  
 
   def destroy
-    @port = Portfolio.find(params[:id]) 
+    @ports = Portfolio.find(params[:id]) 
 
-    @port.destroy
+    @ports.destroy
     respond_to do |format|
       format.html { redirect_to portfolios_url, notice: 'Removed!!' }
     end
