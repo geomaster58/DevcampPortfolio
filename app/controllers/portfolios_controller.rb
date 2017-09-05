@@ -1,4 +1,5 @@
 class PortfoliosController < ApplicationController
+  before_action :set_portfolio_item, only: [:edit, :update, :show,  :destroy]
   layout "portfolio"
 
 
@@ -20,7 +21,6 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @ports = Portfolio.find(params[:id])
   end  
 
   def create
@@ -40,13 +40,13 @@ class PortfoliosController < ApplicationController
   end
 
   def edit 
-    @ports = Portfolio.find(params[:id]) 
+    
      3.times { @port.technologies.build }
   end
 
   def update
 
-    @ports = Portfolio.find(params[:id]) 
+     
 
     respond_to do |format|
       if @ports.update(portfolio_params)
@@ -60,7 +60,7 @@ class PortfoliosController < ApplicationController
   end  
 
   def destroy
-    @ports = Portfolio.find(params[:id]) 
+    
 
     @ports.destroy
     respond_to do |format|
@@ -75,6 +75,9 @@ class PortfoliosController < ApplicationController
     params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image)                                      
   end
 
+  def set_portfolio_item
+    @ports = Portfolio.find(params[:id])
+  end
 
 
 end
