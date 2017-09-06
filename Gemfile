@@ -59,3 +59,5 @@ gem 'devise', '~> 4.3'
 gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
+
+gem 'KeeneysAwesomeViewTool', '~> 0.1.0'
