@@ -1,10 +1,10 @@
 <h1> √ Welcome to The HomePage!! ∑</h1>
   
 <h2> ∫ Hello <%= current_user.first_name %> ∫</h2> 
-  <% if current_user.is_a?(User) %>
-    <%= link_to "Portfolio", portfolios_path, method: :get %>
-    <%= link_to "Blogs", blogs_path, method: :get %>
-  <% end %>
+ 
+<%= link_to "Portfolio", portfolios_path, method: :get %>
+<%= link_to "Blogs", blogs_path, method: :get %>
+  
  
 <hr>
 

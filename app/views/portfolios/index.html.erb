@@ -4,9 +4,9 @@
 
 <h2>Heres some items:</h2>
 
-<hr width="50%" align="left">
-<%= link_to "Create new Item!!", new_portfolio_path %>
-<hr width="50%" align="left">
+<hr width="50%" align="left" >
+<%= link_to "Create new Item!!", new_portfolio_path if logged_in?(:site_admin)%>
+<hr width="50%" align="left" >
 
 
  <%= render partial: 'port', collection: @ports %> 
