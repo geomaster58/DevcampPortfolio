@@ -6,9 +6,15 @@
 /* Links */
 a,
 a:focus,
-a:hover {
+ {
   color: black;
   text-decoration: none;
+}
+a:hover {
+  
+  color: blue;
+  text-decoration: none;
+
 }
 
 /* Custom default button */
@@ -165,7 +171,11 @@ body {
   
 color: black;
 text-align: left;
-margin-left: 20px
+margin-left: 20px;
+margin-right: 20px;
+margin-bottom: 10px;
+margin-top: 10px;
+
 }
 
 .col-md-4 .auth_links a {
@@ -175,3 +185,15 @@ margin-left: 20px
 
 
 }
+.contact-link a {
+  color: white;
+
+}
+
+.login > .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+
+}
+

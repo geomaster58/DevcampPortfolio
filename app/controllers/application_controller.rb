@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   before_action :set_copyright
 
   def set_copyright
-   @copyright = KeeneysAwesomeViewTool::Renderer.copyright "JJ Keeney", "No rights ever reserved"
+   @copyright = KeeneysAwesomeViewTool::Renderer.copyright "JJ Keeney", "All Rights Reserved"
   end
 
 end
