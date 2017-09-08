@@ -1,15 +1,10 @@
-<h1>Portfolio Items!!</h1>
-
-<hr color="grey">
-
-<h2>Heres some items:</h2>
-
-<hr width="50%" align="left" >
-<%= link_to "Create new Item!!", new_portfolio_path if logged_in?(:site_admin)%>
-<hr width="50%" align="left" >
-
-
- <%= render partial: 'port', collection: @ports %> 
+<div class="album text-muted">
+   <div class="container">
+     <div class="row">
+       <%= render partial: 'port', collection: @ports %>
+     </div>
+   </div>
+ </div> 
 
 
 
