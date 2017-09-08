@@ -1,6 +1,6 @@
 <%= form_with(model: @ports, local: true) do |form| %>
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="form-group">
     <%= form.label :title %>
     <%= form.text_field :title, id: :portfolio_title, class: "form-control" %>
@@ -11,13 +11,11 @@
     <%= form.text_field :subtitle, id: :portfolio_subtitle, class: "form-control" %>
   </div>
 
-<div class="col-md-6">
+
   <div class="form-group">
     <%= form.label :body %>
-    <%= form.text_area :body, id: :portfolio_body, class: "form-control" %>
+    <%= form.text_area :body, id: :portfolio_body, class: "form-control", rows: 12 %>
     </div>
-  
-  
 
     <div class="form-group">
       <%= form.label :thumb_image %>
@@ -27,7 +25,7 @@
       </div>
     </div>
     <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <h2>Technologies Used</h2>
 
   <div>
@@ -45,7 +43,7 @@
     
   </div>
   
-</div>
+
   
   
 
