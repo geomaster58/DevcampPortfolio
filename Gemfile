@@ -63,6 +63,6 @@ gem 'jquery-rails', '~> 4.3', '>= 4.3.1'
 gem 'KeeneysAwesomeViewTool', '~> 0.1.0'
 
 gem 'petergate', '~> 1.7', '>= 1.7.5'
-gem 'kaminari', '~> 1.0', '>= 1.0.1'
+gem 'kaminari', :git => 'https://github.com/kaminari/kaminari.git'
 gem 'font-awesome-rails', '~> 4.7', '>= 4.7.0.2'
 gem 'jquery-ui-rails', '~> 6.0', '>= 6.0.1'

@@ -1,17 +1,30 @@
-<h1>Heres a Portfolio Item!!</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @ports.main_image %>
+    </div>
+    <div class="col-md-5">
+      <h1><%= @ports.title %></h1>
+      <hr>
+      <em><%= @ports.subtitle %></em>
+      <p><%= @ports.body %></p> 
+      <h2>Technologies used</h2>
+    <% @ports.technologies.each do |b| %>
+      <p><%= b.name %></p>
+    <% end %>
+    
+    </div>
+  </div>
 
-<%= image_tag @ports.main_image %>
-<h1><%= @ports.title %></h1>
-<em><%= @ports.subtitle %></em>
-<p><%= @ports.body %></p> 
-<h2>Technologies used</h2>
-<% @ports.technologies.each do |b| %>
-  <p><%= b.name %></p>
-<% end %>
 
-<hr>
+
+</div>
+
+
+
+
+
 
 
 
  
-<%= link_to "Back", portfolios_path %>

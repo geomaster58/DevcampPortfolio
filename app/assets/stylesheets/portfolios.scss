@@ -1,11 +1,12 @@
 @import "bootstrap";
- 
+@import "font-awesome";
  body {
    min-height: 75rem; /* Can be removed; just added for demo purposes */
  }
  
  .navbar {
    margin-bottom: 0;
+   background-color: #0d3c87;
  }
  
  .jumbotron {
@@ -58,3 +59,60 @@
  footer p {
    margin-bottom: .25rem;
  }
+ .custom-toggler {
+  border-color: green;
+}
+.social-links a{
+  
+  font-size: 2.0em;
+
+
+
+}
+
+.social-links a:hover {
+  
+  color: green;
+
+
+}
+
+#navbarHeader {
+   
+background-color: black;
+
+}
+.navbar-brand {
+   
+color: #02d6d6;
+border-color: green;
+
+}
+
+.text-info a{
+   
+text-decoration: none;
+
+
+}
+
+.text-info:hover {
+   
+color: #009191;
+
+}
+
+.list-unstyled a{
+   
+text-decoration: none;
+
+
+}
+.btn-primary {
+   
+border-color: green;
+
+   
+}
+
+
