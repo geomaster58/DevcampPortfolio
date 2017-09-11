@@ -83,7 +83,7 @@
 background-color: black;
 
 }
-.navbar-brand {
+.navbar-brand a:hover {
    
 color: black;
 
@@ -111,7 +111,7 @@ text-decoration: none;
 }
 .btn-primary {
    
-border-color: green;
+border-color: #6ba3ff;
 
 
 }
@@ -120,5 +120,12 @@ border-color: green;
 }
 .button {
   font-size: 30px;
+
+}
+
+.custom-toggler-btn {
+  
+background: -webkit-linear-gradient( #293f50, #0d3c87);
+
 
 }
