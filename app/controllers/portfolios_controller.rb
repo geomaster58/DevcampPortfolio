@@ -31,24 +31,21 @@ class PortfoliosController < ApplicationController
   def show
   end  
 
-  def create
-    @ports = Portfolio.new(portfolio_params)
-
-    
+   def create
+    @port = Portfolio.new(portfolio_params)
 
     respond_to do |format|
-      if @ports.save
-        format.html { redirect_to portfolios_path, notice: 'Your portfolio item exists now!!' }
+
+      if @port.save
         
+        format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
       else
         format.html { render :new }
-       
       end
     end
   end
 
   def edit 
-     3.times { @port.technologies.build }
   end
 
   def update
@@ -79,7 +76,12 @@ class PortfoliosController < ApplicationController
   private
 
   def portfolio_params
-    params.require(:portfolio).permit(:title, :subtitle, :body, :thumb_image, :main_image)                                      
+    params.require(:portfolio).permit(:title, 
+                                      :subtitle, 
+                                      :body, 
+                                      :thumb_image, 
+                                      :main_image, 
+                                      technologies_attributes: [:name])                                      
   end
 
   def set_portfolio_item
