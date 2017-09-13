@@ -32,11 +32,11 @@ class PortfoliosController < ApplicationController
   end  
 
    def create
-    @port = Portfolio.new(portfolio_params)
+    @ports = Portfolio.new(portfolio_params)
 
     respond_to do |format|
 
-      if @port.save
+      if @ports.save
         
         format.html { redirect_to portfolios_path, notice: 'Your portfolio item is now live.' }
       else
