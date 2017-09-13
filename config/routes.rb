@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     put :sort, on: :collection
   end
 
+  get 'tech-news', to: 'pages#tech_news'
   get 'angularitems', to: 'portfolios#angular'
   get 'railsitems' , to: 'portfolios#rails'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
