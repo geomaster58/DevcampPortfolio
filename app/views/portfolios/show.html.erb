@@ -12,7 +12,11 @@
     <% @ports.technologies.each do |b| %>
       <p><%= b.name %></p>
     <% end %>
-    
+    <% if logged_in?(:site_admin) %>
+    <div class="col-md-12">
+      <%= link_to 'Edit Item', edit_portfolio_path(@ports), class: "btn btn-warning" %>
+    </div>
+    <% end %>
     </div>
   </div>
 
