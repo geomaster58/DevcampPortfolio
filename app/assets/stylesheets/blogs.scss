@@ -163,6 +163,7 @@ h6, .h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
+  margin-top: 20px;
 }
 .blog-footer p:last-child {
   margin-bottom: 0;
@@ -245,5 +246,13 @@ border-color: green;
    background-color: #0d3c87;
  }
 
+.comment-card > .card {
+  margin-top: 15px;
 
+}
+
+.comment-attribution {
+  font-size: .8em;
+  font-style: italic;
+}
 
