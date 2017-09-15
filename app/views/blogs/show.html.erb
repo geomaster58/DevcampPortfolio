@@ -4,10 +4,15 @@
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago </p>
 
 
-<p>
-  <%= @blog.body %>
-</p>
-<%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-<%= link_to 'Back', blogs_path %>
+  <p>
+    <%= @blog.body %>
+  </p>
+  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
+  <%= link_to 'Back', blogs_path %>
+
+  <%= render 'comments/form' %>
+
+  <%= render @blog.comments %>
+
 </div>
 
