@@ -3,5 +3,6 @@
         <h1 class="blog-title">JJ's Blog</h1>
         <p class="lead blog-description">The world is so cool. So is Rails.</p>
         <%= link_to 'New Blog', new_blog_path if logged_in?(:site_admin) %>
+        <%= link_to 'Sort by Topics', topics_path %>
       </div>
     </div>
