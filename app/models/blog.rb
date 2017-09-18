@@ -5,11 +5,11 @@ class Blog < ApplicationRecord
   friendly_id :title, use: :slugged
 
 
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
   has_many :comments, dependent: :destroy
 
-  #belongs_to :topic
+  belongs_to :topic
 
   def self.recent
     order("created_at DESC")
