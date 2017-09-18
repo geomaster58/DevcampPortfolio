@@ -3,20 +3,37 @@
   <h2 class="blog-post-title"><%= @blog.title %></h2>
   <p class="blog-post-meta">Published <%= distance_of_time_in_words(@blog.created_at, Time.now) %> ago </p>
 
+
+  <nav class="breadcrumb">
+    <%= link_to "Home", root_path, class: "breadcrumb-item" %>
+    <%= link_to @blog.topic.title, topic_path(@blog.topic), class: "breadcrumb-item" %>
+    <span class="breadcrumb-item active"><%= @blog.title %></span>
+
+
+
+    <span class="pull-right">
+      <%= link_to fa_icon("pencil-square-o"), edit_blog_path(@blog) if logged_in?(:site_admin) %>
+      <%= link_to fa_icon("trash"), @blog, method: :delete, data: { confirm: 'Are you sure about that?'} if logged_in?(:site_admin) %>  
+      
+    </span>
+  </nav>
+
   <%= @blog.topic.title %>
+
+  
 
   <p>
     <%= markdown @blog.body %>
   </p>
-    <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-    <%= link_to 'Back', blogs_path %>
+  
+  <%= link_to 'Back', blogs_path %>
 
-    <hr>
+  <hr>
 
-    <h3>Comment Section</h3>
-     <p><%= link_to "Sign in ", user_session_url %> or <%= link_to "Register", new_user_registration_url %> to comment </p> 
+  <h3>Comment Section</h3>
+  <p><%= link_to "Sign in ", user_session_url %> or <%= link_to "Register", new_user_registration_url %> to comment </p> 
 
-    <%= render 'comments/comment_form' %>
+  <%= render 'comments/comment_form' %>
 
   <div id="comments" data-blog-id="<%= @blog.id %>">
     <%= render @blog.comments %>
