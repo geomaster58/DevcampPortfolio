@@ -2,6 +2,19 @@ Rails.application.routes.draw do
 
 
   
+  namespace :admin do
+    resources :users
+    resources :blogs
+    resources :comments
+    resources :portfolios
+    resources :skills
+    resources :technologies
+    resources :topics
+    resources :guest_users
+
+    root to: "users#index"
+  end
+
   resources :topics, only: [:index, :show]
 
   devise_for :users, path: '', path_names: {sign_in: 'login', sign_out: 'logout', sign_up: 'register'}

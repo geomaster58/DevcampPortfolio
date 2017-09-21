@@ -15,6 +15,7 @@
             <ul class="list-unstyled">
                <%= nav_helper 'text-info','li' %>
                <li><%= login_helper 'text-info' %></li>
+               <li><%= link_to "Admin", admin_root_path if logged_in?(:site_admin) %></li>
             </ul>
           </div>
         </div>
