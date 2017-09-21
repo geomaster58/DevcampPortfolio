@@ -19,7 +19,6 @@ body {
 h1, .h1,
 h2, .h2,
 h3, .h3,
-h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-family: 'Anton', sans-serif;
@@ -184,6 +183,8 @@ h6, .h6 {
 }
 .custom-toggler {
   border-color: green;
+  margin-right: 50px;
+
 }
 .social-links a{
   
@@ -203,7 +204,7 @@ h6, .h6 {
 #navbarHeader {
    
 background-color: black;
-
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 }
 .navbar-brand {
    
@@ -242,8 +243,11 @@ border-color: green;
 }
 
 .navbar {
-   margin-bottom: 0;
-   background-color: #0d3c87;
+   margin-bottom: 30px;
+   background-color: black;
+   height: 70px;
+   border-top: 2px grey solid;
+
  }
 
 .comment-card > .card {
@@ -258,4 +262,12 @@ border-color: green;
 
 .blog-sidebar-source {
   margin-top: 20px;
+}
+
+.button {
+  font-size: 30px;
+
+}
+.btn {
+  background-color: #aaddd7;
 }

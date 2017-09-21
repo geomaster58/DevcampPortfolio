@@ -7,12 +7,13 @@
     <meta name="keywords" content= <%= @seo_keywords %> />
     <%= favicon_link_tag 'favicons/favicon.ico' %>
      <link href="https://fonts.googleapis.com/css?family=Anton|Ubuntu+Condensed" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Pacifico|Yellowtail" rel="stylesheet">
     <%= stylesheet_link_tag    'blogs', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-  <%= render "shared/blog_nav", location: 'top' %>
+  <%= render "shared/portfolio_nav", location: 'top' %>
 
   <%= render "shared/blog_masthead" %>
    

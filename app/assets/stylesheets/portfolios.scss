@@ -8,6 +8,9 @@
  .navbar {
    margin-bottom: 0;
    background-color: black;
+   height: 70px;
+   border-top: 2px grey solid;
+
  }
  
  .jumbotron {
@@ -81,7 +84,7 @@
 #navbarHeader {
    
 background-color: black;
-
+font-weight: 500;
 }
 .navbar-brand a:hover {
    
@@ -127,7 +130,10 @@ border-color: #6ba3ff;
   
 background: -webkit-linear-gradient( #293f50, #0d3c87);
 
+}
 
+.btn {
+  background-color: #aaddd7;
 }
 
 

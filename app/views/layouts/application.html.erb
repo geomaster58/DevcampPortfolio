@@ -6,6 +6,7 @@
     <title> <%= @page_title %> </title>
     <%= csrf_meta_tags %>
     <link href="https://fonts.googleapis.com/css?family=Anton|Ubuntu+Condensed" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico|Yellowtail" rel="stylesheet">
     <meta name="keywords" content= <%= @seo_keywords %> />
     <%= favicon_link_tag 'favicons/empire.ico' %>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,7 +14,7 @@
   </head>
 
   <body>
-
+<%= render "shared/portfolio_nav" %>
    <div class="site-wrapper">
 
       <div class="site-wrapper-inner">
@@ -32,7 +33,7 @@
             poster: 'home_bg.png'
             )
             %>
-          <%= render "shared/application_nav" %>
+          
             
   
           
