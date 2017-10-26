@@ -3,11 +3,26 @@
           
 
 <div class="inner cover">
-  <h1 class="cover-heading">Welcome to my Portfolio</h1>
+  <svg class= "welcome-text" viewBox="0 0 960 300">
+    <symbol id="s-text">
+        <text text-anchor="middle" x="50%" y="80%">Welcome</text>
+    </symbol>
+
+    <g class = "g-ants">
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+        <use xlink:href="#s-text" class="text-copy"></use>
+    </g>
+</svg>
   <p class="lead">Please take a look around my site and discover more about me and the projects I've worked on. You can also press the button below and go to my about page for some quick info.</p>
   <p class="lead">
-    <%=link_to "Learn More", about_me_path,  class: "btn btn-lg btn-secondary" %>
+    <%=link_to "Learn More", about_me_path,  class: "btn btn-lg btn-success" %>
   </p>
+
+
+
 </div>
 
           
